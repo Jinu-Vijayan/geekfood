@@ -24,7 +24,7 @@ function Grid(){
             {
                 reviewData.map((elem,index)=>{
                     return(
-                        <ReviewCard imgSrc = {elem.reviewerImage} review={elem.review} reviewerName={elem.reviewerName} reviewerDesignation={elem.reviewerDesignation} />
+                        <ReviewCard key={index} imgSrc = {elem.reviewerImage} review={elem.review} reviewerName={elem.reviewerName} reviewerDesignation={elem.reviewerDesignation} />
                     )
                 })
             }
