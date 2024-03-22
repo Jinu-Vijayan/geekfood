@@ -7,11 +7,9 @@ import Footer from "../components/Footer.js"
 function LandingScreen(){
     return(
         <>
-            <Navbar/>
             <HeroSection/>
             <SecondSection/>
             <Grid/>
-            <Footer/>
         </>
     )
 }

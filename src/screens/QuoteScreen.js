@@ -23,14 +23,12 @@ function QuoteScreen(){
 
     return(
         <>
-            <div className='behind-nav'></div>
-            <Navbar/>
+            
             {
                 quotes.map((elem,index)=>{
                     return <QuoteCard key={index} authorName ={elem.quoteAuthor}>{elem.quote}</QuoteCard>
                 })
             }
-            <Footer/>
         </>
     );
 };

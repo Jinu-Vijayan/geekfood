@@ -2,8 +2,11 @@ import './Navbar.css'
 import geekfoodsIcon from "../assets/images/geekfoodsIcon.svg"
 import Button from "./Button.js"
 import menu from '../assets/icons/menu-svgrepo-com.svg'
+import { Link } from 'react-router-dom'
 
 function Navbar(){
+
+
     return(
         <>
             <nav id='navbar'>
@@ -16,11 +19,11 @@ function Navbar(){
                 </div>
                 <div>
                     <ul id="nav-links">
-                        <li>Home</li>
-                        <li>Quote</li>
-                        <li>Resturants</li>
-                        <li>Foods</li>
-                        <li>Contacts</li>
+                        <li><Link to='/'className='link-tags'>Home</Link></li>
+                        <li><Link to='/quotes' className='link-tags'>Quote</Link></li>
+                        <li><Link to='/restraunts' className='link-tags'>Resturants</Link></li>
+                        <li><Link to='/foods' className='link-tags'>Food</Link></li>
+                        <li><Link to='/contact' className='link-tags'>Contacts</Link></li>
                     </ul>
                 </div>
                 <div>

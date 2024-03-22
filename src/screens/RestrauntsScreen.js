@@ -41,7 +41,6 @@ function RestrauntsScreen(){
 
     return(
         <>
-            <Navbar/>
             <main id='restraunts-container'>
                 <div id='search-box'>
                     <input type='text' placeholder='Enter restraunt name' onChange={filterRestrauntByName} />
@@ -57,7 +56,6 @@ function RestrauntsScreen(){
                     }
                 </div>
             </main>
-            <Footer/>
         </>
     )
 }
