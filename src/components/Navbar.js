@@ -2,9 +2,15 @@ import './Navbar.css'
 import geekfoodsIcon from "../assets/images/geekfoodsIcon.svg"
 import Button from "./Button.js"
 import menu from '../assets/icons/menu-svgrepo-com.svg'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 function Navbar(){
+
+    const style = ({isActive}) => {
+        return {
+            color : isActive ? "blue" : "black"
+        }
+    }
 
 
     return(
@@ -19,11 +25,15 @@ function Navbar(){
                 </div>
                 <div>
                     <ul id="nav-links">
-                        <li><Link to='/'className='link-tags'>Home</Link></li>
-                        <li><Link to='/quotes' className='link-tags'>Quote</Link></li>
-                        <li><Link to='/restraunts' className='link-tags'>Resturants</Link></li>
-                        <li><Link to='/foods' className='link-tags'>Food</Link></li>
-                        <li><Link to='/contact' className='link-tags'>Contacts</Link></li>
+                        <li><NavLink to='/' className="link-tags" style={style}>Home</NavLink></li>
+                        <li><NavLink to='/quotes'  className="link-tags" style={style}>Quote</NavLink></li>
+                        <li><NavLink to='/restraunts'  className="link-tags" style={({isActive})=>{
+                            return{
+                                color : isActive ? "blue" : "black"
+                            }
+                        }}>Resturants</NavLink></li>
+                        <li><NavLink to='/foods'  className="link-tags" style={style}>Food</NavLink></li>
+                        <li><NavLink to='/contact'  className="link-tags" style={style}>Contacts</NavLink></li>
                     </ul>
                 </div>
                 <div>
